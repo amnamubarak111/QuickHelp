@@ -1,0 +1,36 @@
+<!-- templates/emergencyTemplate.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emergency Alert</title>
+    <style>
+        /* Add some basic styling */
+        body { font-family: Arial, sans-serif; }
+        .container { padding: 20px; border: 1px solid #ddd; border-radius: 5px; }
+        .header { background-color: #f44336; color: white; padding: 10px; text-align: center; }
+        .content { margin-top: 20px; }
+        .location { list-style-type: none; padding: 0; }
+        .location li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Emergency Alert!</h2>
+        </div>
+        <div class="content">
+            <p>I need help.</p>
+            <p><strong>My current location:</strong></p>
+            <ul class="location">
+                <li>Address: {{address}}</li>
+                <li>Latitude: {{latitude}}</li>
+                <li>Longitude: {{longitude}}</li>
+            </ul>
+            <p>Please assist me immediately.</p>
+            <p>View on Map: <a href="https://www.google.com/maps/search/?api=1&query={{latitude}},{{longitude}}">Click Here</a></p>
+        </div>
+    </div>
+</body>
+</html>
